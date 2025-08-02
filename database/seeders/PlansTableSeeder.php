@@ -1,0 +1,198 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Plan;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Carbon;
+
+class PlansTableSeeder extends Seeder
+{
+    public function run()
+    {
+        $plans = [
+            [
+                'title' => 'Kandy Cultural Tour',
+                'short_description' => 'Explore the rich cultural heritage of Kandy with our 3-day tour package.',
+                'full_description' => 'This 3-day tour takes you through the cultural heart of Sri Lanka. Visit ancient temples, enjoy traditional dance performances, and experience the beauty of the hill country. The package includes accommodation, meals, and all entrance fees.',
+                'image' => 'plans/k3.jpg',
+                'price_per_person' => 299.99,
+                'start_date' => Carbon::now()->addDays(15)->toDateString(),
+                'start_location' => 'Colombo',
+                'hotel_name' => 'The Grand Kandyan Hotel',
+                'hotel_description' => 'A luxurious 5-star hotel with panoramic views of Kandy city and the surrounding hills. Features spacious rooms, a rooftop pool, and excellent dining options.',
+                'hotel_images' => json_encode([
+                    'images/hotels/kandy1.jpg',
+                    'images/hotels/kandy2.jpg',
+                    'images/hotels/kandy3.jpg'
+                    
+                ]),
+                'hotel_rating' => '5-star',
+                'hotel_location' => '123 Temple Road, Kandy',
+                'has_wifi' => true,
+                'has_pool' => true,
+                'has_gym' => true,
+                'has_spa' => true,
+                'has_restaurant' => true,
+                'room_type' => 'Deluxe Room',
+                'nights_included' => 2,
+                'meal_plan' => 'Half Board',
+                'nearby_attractions' => 'Temple of the Tooth, Kandy Lake, Royal Botanical Gardens',
+                'transportation_details' => 'Private air-conditioned vehicle with driver for all transfers',
+                'cancellation_policy' => 'Free cancellation up to 7 days before arrival',
+                'hotel_phone' => '+94 812345678',
+                'hotel_email' => 'reservations@grandkandyan.com',
+                'has_special_offer' => true,
+                'special_offer_details' => 'Complimentary spa treatment for stays of 2 nights or more',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Beach Paradise - South Coast',
+                'short_description' => 'Relax on Sri Lanka\'s beautiful southern beaches with this 5-day getaway.',
+                'full_description' => 'Experience the stunning beaches of Sri Lanka\'s south coast. This 5-day package includes stays at beachfront hotels, snorkeling trips, whale watching (seasonal), and sunset beach dinners. Perfect for couples and families looking for a relaxing beach vacation.',
+                'image' => 'plans/b1.jpg',
+                'price_per_person' => 499.99,
+                'start_date' => Carbon::now()->addDays(20)->toDateString(),
+                'start_location' => 'Galle',
+                'hotel_name' => 'Blue Ocean Resort',
+                'hotel_description' => 'Beachfront resort with direct access to a private sandy beach. Features tropical gardens, two swimming pools, and a variety of water sports.',
+                'hotel_images' => json_encode([
+                    'images/hotels/h1.jpg',
+                    'images/hotels/h2.jpg',
+                    'images/hotels/h3.jpg'
+                    
+                ]),
+                'hotel_rating' => '4-star',
+                'hotel_location' => 'Beach Road, Unawatuna',
+                'has_wifi' => true,
+                'has_pool' => true,
+                'has_gym' => false,
+                'has_spa' => true,
+                'has_restaurant' => true,
+                'room_type' => 'Beachfront Villa',
+                'nights_included' => 4,
+                'meal_plan' => 'All Inclusive',
+                'nearby_attractions' => 'Unawatuna Beach, Galle Fort, Jungle Beach',
+                'transportation_details' => 'Airport transfers included, local tuk-tuk service available',
+                'cancellation_policy' => 'Free cancellation up to 14 days before arrival',
+                'hotel_phone' => '+94 912345678',
+                'hotel_email' => 'info@blueoceanresort.com',
+                'has_special_offer' => false,
+                'special_offer_details' => null,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Wildlife Safari Adventure',
+                'short_description' => 'Discover Sri Lanka\'s amazing wildlife with our 4-day safari package.',
+                'full_description' => 'This 4-day wildlife adventure takes you to Yala and Udawalawe national parks, home to elephants, leopards, and hundreds of bird species. Includes safari jeep rides, nature walks, and stays at eco-friendly lodges. Perfect for nature lovers and photographers.',
+                'image' => 'plans/w1.jpeg',
+                'price_per_person' => 399.99,
+                'start_date' => Carbon::now()->addDays(30)->toDateString(),
+                'start_location' => 'Colombo',
+                'hotel_name' => 'Wilderness Safari Lodge',
+                'hotel_description' => 'Eco-friendly lodge located near Yala National Park. Features rustic-chic accommodations, a nature pool, and expert safari guides.',
+                'hotel_images' => json_encode([
+                    'images/hotels/w2.jpg',
+                    'images/hotels/w3.jpg',
+                    'images/hotels/w4.jpg'
+                    
+                ]),
+                'hotel_rating' => 'Luxury',
+                'hotel_location' => 'Yala National Park Border',
+                'has_wifi' => false,
+                'has_pool' => true,
+                'has_gym' => false,
+                'has_spa' => false,
+                'has_restaurant' => true,
+                'room_type' => 'Safari Tent',
+                'nights_included' => 3,
+                'meal_plan' => 'Full Board',
+                'nearby_attractions' => 'Yala National Park, Bundala National Park, Kataragama Temple',
+                'transportation_details' => 'All safari transfers included in 4x4 jeeps',
+                'cancellation_policy' => 'Free cancellation up to 21 days before arrival',
+                'hotel_phone' => '+94 772345678',
+                'hotel_email' => 'bookings@wildernesslodge.com',
+                'has_special_offer' => true,
+                'special_offer_details' => 'Free night safari included with 3-night stay',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Hill Country Train Journey',
+                'short_description' => 'Experience Sri Lanka\'s scenic hill country by train on this 3-day tour.',
+                'full_description' => 'Travel through Sri Lanka\'s beautiful hill country by train, visiting tea plantations, waterfalls, and colonial towns. This 3-day package includes first-class train tickets, guided tours of tea factories, and stays at charming hill country hotels. A must-do for train enthusiasts and those who love cool mountain climates.',
+                'image' => 'plans/e1.jpeg',
+                'price_per_person' => 349.99,
+                'start_date' => Carbon::now()->addDays(25)->toDateString(),
+                'start_location' => 'Kandy',
+                'hotel_name' => 'Mountain View Hotel',
+                'hotel_description' => 'Colonial-era hotel with stunning views of tea plantations. Features a tea lounge, fireplace in rooms, and beautiful gardens.',
+                'hotel_images' => json_encode([
+                    'images/hotels/e2.jpeg',
+                    'images/hotels/e3.jpeg',
+                    'images/hotels/e1.jpeg'
+                    
+                ]),
+                'hotel_rating' => 'Boutique',
+                'hotel_location' => 'Nuwara Eliya',
+                'has_wifi' => true,
+                'has_pool' => false,
+                'has_gym' => false,
+                'has_spa' => false,
+                'has_restaurant' => true,
+                'room_type' => 'Heritage Room',
+                'nights_included' => 2,
+                'meal_plan' => 'Bed & Breakfast',
+                'nearby_attractions' => 'Tea plantations, Gregory Lake, Hakgala Botanical Garden',
+                'transportation_details' => 'First class train tickets included, local transport arranged',
+                'cancellation_policy' => 'Free cancellation up to 10 days before arrival',
+                'hotel_phone' => '+94 522345678',
+                'hotel_email' => 'reservations@mountainview.com',
+                'has_special_offer' => false,
+                'special_offer_details' => null,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'title' => 'Ancient Cities Exploration',
+                'short_description' => 'Discover Sri Lanka\'s ancient cities with our 5-day cultural tour.',
+                'full_description' => 'This 5-day tour takes you to Sri Lanka\'s Cultural Triangle, visiting ancient cities like Anuradhapura, Polonnaruwa, and Sigiriya. Includes guided tours of UNESCO World Heritage sites, stays at cultural hotels, and traditional Sri Lankan meals. Perfect for history buffs and culture enthusiasts.',
+                'image' => 'plans/ancient-tour.jpg',
+                'price_per_person' => 449.99,
+                'start_date' => Carbon::now()->addDays(40)->toDateString(),
+                'start_location' => 'Colombo',
+                'hotel_name' => 'Cultural Heritage Resort',
+                'hotel_description' => 'A unique resort designed to reflect ancient Sri Lankan architecture. Features a cultural show every evening and authentic local cuisine.',
+                'hotel_images' => json_encode([
+                    'images/hotels/a2.jpeg',
+                    'images/hotels/a3.jpeg',
+                    'images/hotels/a1.jpeg'
+                    
+                ]),
+                'hotel_rating' => '4-star',
+                'hotel_location' => 'Sigiriya',
+                'has_wifi' => true,
+                'has_pool' => true,
+                'has_gym' => false,
+                'has_spa' => true,
+                'has_restaurant' => true,
+                'room_type' => 'Cultural Suite',
+                'nights_included' => 4,
+                'meal_plan' => 'Half Board',
+                'nearby_attractions' => 'Sigiriya Rock Fortress, Dambulla Cave Temple, Minneriya National Park',
+                'transportation_details' => 'Private vehicle with guide for all transfers and tours',
+                'cancellation_policy' => 'Free cancellation up to 14 days before arrival',
+                'hotel_phone' => '+94 662345678',
+                'hotel_email' => 'info@culturalheritage.com',
+                'has_special_offer' => true,
+                'special_offer_details' => 'Free sunset cocktail at Sigiriya Rock viewpoint',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ];
+
+        Plan::insert($plans);
+    }
+}
